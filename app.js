@@ -80,7 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (decimals > 0) {
                 formattedVal = currentVal.toFixed(decimals);
             } else {
-                formattedVal = Math.floor(currentVal).toLocaleString('fr-FR');
+                formattedVal = Math.floor(currentVal).toLocaleString('en-US');
             }
 
             el.textContent = `${prefix}${formattedVal}${suffix}`;
@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             closeProposalModal();
             proposalForm.reset();
-            showToast('Demande de proposition soumise ! Notre équipe de conformité B2B l\'examinera et vous contactera sous 24 heures.');
+            showToast('Proposal request submitted! Our B2B compliance team will review and contact you within 24 hours.');
         });
     }
 
@@ -250,7 +250,7 @@ document.addEventListener('DOMContentLoaded', () => {
         directContactForm.addEventListener('submit', (e) => {
             e.preventDefault();
             directContactForm.reset();
-            showToast('Merci de nous avoir contactés. Votre demande commerciale a été transmise à notre équipe.');
+            showToast('Thank you for reaching out. Your commercial inquiry has been routed to our officer team.');
         });
     }
 });
